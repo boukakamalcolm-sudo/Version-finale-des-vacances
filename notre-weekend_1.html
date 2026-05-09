@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notre weekend · 28-30 août 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink: #FBC9D2;
+  --pink-deep: #F2A5B3;
+  --pink-soft: #FFE9ED;
+  --cream: #FBF5EE;
+  --cream-deep: #F4ECDF;
+  --ink: #2D2122;
+  --ink-soft: #5A4747;
+  --ink-mute: #8B7878;
+
+  --madrid: #FFB89A;
+  --madrid-soft: #FFE3D5;
+  --madrid-deep: #E07A55;
+
+  --rome: #F2C28A;
+  --rome-soft: #FFEFD8;
+  --rome-deep: #C28548;
+
+  --venise: #A8C9DD;
+  --venise-soft: #E1EEF6;
+  --venise-deep: #5C8AA8;
+
+  --prague: #BFD3B0;
+  --prague-soft: #EAF3E2;
+  --prague-deep: #6F8F5A;
+
+  --shadow: 0 1px 2px rgba(45,33,34,.04), 0 8px 24px rgba(45,33,34,.06);
+  --shadow-lg: 0 1px 2px rgba(45,33,34,.04), 0 24px 60px rgba(45,33,34,.10);
+  --radius: 22px;
+  --radius-sm: 12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  color:var(--ink);
+  background:var(--cream);
+  background-image:
+    radial-gradient(circle at 12% 8%, var(--pink-soft) 0%, transparent 35%),
+    radial-gradient(circle at 88% 22%, var(--madrid-soft) 0%, transparent 30%),
+    radial-gradient(circle at 92% 88%, var(--venise-soft) 0%, transparent 35%),
+    radial-gradient(circle at 8% 92%, var(--prague-soft) 0%, transparent 30%);
+  background-attachment:fixed;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:'';
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.13  0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.5; mix-blend-mode:multiply;
+  pointer-events:none; z-index:1;
+}
+
+.wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:48px 28px 96px}
+
+.hero{position:relative;padding:64px 0 56px;text-align:left}
+.hero .ticket{
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--pink);
+  color:var(--ink);
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:13px; font-weight:600;
+  letter-spacing:.04em; text-transform:uppercase;
+  box-shadow:var(--shadow);
+  margin-bottom:28px;
+}
+.hero .ticket::before{content:'✈'; font-size:14px}
+.hero h1{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  font-size:clamp(48px, 9vw, 104px);
+  line-height:.96;
+  letter-spacing:-.025em;
+  margin-bottom:20px;
+  font-variation-settings: "opsz" 144;
+}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--pink-deep)}
+.hero .sub{font-size:clamp(17px, 2vw, 21px);color:var(--ink-soft);max-width:620px;margin-bottom:28px}
+
+.action-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}
+.action-btn{
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-weight:700;
+  font-size:14px;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid rgba(45,33,34,.08);
+  border-radius:999px;
+  padding:12px 18px;
+  box-shadow:var(--shadow);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.action-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);background:var(--pink-soft)}
+.action-btn.primary{background:var(--ink);color:#fff}
+
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:14px;margin-top:8px}
+.meta-card{background:#fff;border-radius:var(--radius-sm);padding:18px 20px;box-shadow:var(--shadow);border:1px solid rgba(45,33,34,.06)}
+.meta-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-mute);margin-bottom:6px;font-weight:600}
+.meta-card .value{font-family:'Fraunces', serif;font-size:22px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+
+.brief{margin:64px 0 40px;background:var(--pink-soft);border-radius:var(--radius);padding:40px 36px;position:relative}
+.brief::before{content:'';position:absolute;top:-14px;right:36px;width:28px;height:28px;background:var(--pink-deep);border-radius:50%;box-shadow:0 4px 14px rgba(242,165,179,.4)}
+.brief h2{font-family:'Fraunces', serif;font-weight:500;font-size:32px;margin-bottom:18px;letter-spacing:-.015em}
+.brief p{color:var(--ink-soft);max-width:700px;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#fff;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink);border:1px solid rgba(242,165,179,.5)}
+.warning-box{
+  margin-top:22px;
+  background:#fff;
+  border:1px solid rgba(242,165,179,.7);
+  border-left:6px solid var(--pink-deep);
+  padding:16px 18px;
+  border-radius:var(--radius-sm);
+  color:var(--ink-soft);
+  box-shadow:var(--shadow);
+}
+.warning-box strong{color:var(--ink)}
+
+.tabs-section{margin-top:48px}
+.tabs-section h2{font-family:'Fraunces', serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:-.01em;margin-bottom:24px;color:var(--ink)}
+.tabs-section h2::before{content:'— ';color:var(--pink-deep);font-style:normal}
+.tab-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;padding:8px;background:#fff;border-radius:18px;box-shadow:var(--shadow);border:1px solid rgba(45,33,34,.06)}
+.tab-btn{flex:1;min-width:140px;padding:14px 18px;border:none;background:transparent;font-family:inherit;font-size:15px;font-weight:600;color:var(--ink-soft);border-radius:12px;cursor:pointer;transition:all .25s ease;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tab-btn .num{font-family:'Fraunces', serif;font-size:11px;font-weight:400;font-style:italic;color:var(--ink-mute);letter-spacing:.06em}
+.tab-btn:hover{background:var(--cream-deep)}
+.tab-btn.active{color:var(--ink)}
+.tab-btn[data-city="madrid"].active{background:var(--madrid-soft)}
+.tab-btn[data-city="rome"].active{background:var(--rome-soft)}
+.tab-btn[data-city="venise"].active{background:var(--venise-soft)}
+.tab-btn[data-city="prague"].active{background:var(--prague-soft)}
+.tab-btn[data-city="comparatif"].active{background:var(--pink-soft)}
+
+.tab-panel{display:none; animation:fadeIn .4s ease}
+.tab-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:translateY(0)}}
+
+.city-card{border-radius:var(--radius);padding:44px 40px;position:relative;overflow:hidden;margin-bottom:24px}
+.city-card[data-city="madrid"]{background:var(--madrid-soft)}
+.city-card[data-city="rome"]{background:var(--rome-soft)}
+.city-card[data-city="venise"]{background:var(--venise-soft)}
+.city-card[data-city="prague"]{background:var(--prague-soft)}
+.city-card::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;opacity:.4}
+.city-card[data-city="madrid"]::after{background:var(--madrid)}
+.city-card[data-city="rome"]::after{background:var(--rome)}
+.city-card[data-city="venise"]::after{background:var(--venise)}
+.city-card[data-city="prague"]::after{background:var(--prague)}
+.city-header{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:36px}
+.city-name{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(56px, 8vw, 88px);line-height:.92;letter-spacing:-.03em;font-variation-settings:"opsz" 144}
+.city-tagline{font-family:'Fraunces', serif;font-style:italic;font-weight:400;font-size:22px;color:var(--ink-soft)}
+.city-card[data-city="madrid"] .city-tagline{color:var(--madrid-deep)}
+.city-card[data-city="rome"] .city-tagline{color:var(--rome-deep)}
+.city-card[data-city="venise"] .city-tagline{color:var(--venise-deep)}
+.city-card[data-city="prague"] .city-tagline{color:var(--prague-deep)}
+.price-tag{display:inline-flex;flex-direction:column;gap:2px;margin-top:14px;padding:12px 18px;border-radius:18px;font-size:14px;font-weight:700;font-family:'Plus Jakarta Sans', sans-serif;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.65)}
+.price-tag strong{font-family:'Fraunces', serif;font-size:28px;line-height:1;letter-spacing:-.02em}
+.price-tag span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:inherit;opacity:.75}
+.city-card[data-city="madrid"] .price-tag{background:var(--madrid); color:var(--madrid-deep)}
+.city-card[data-city="rome"] .price-tag{background:var(--rome); color:var(--rome-deep)}
+.city-card[data-city="venise"] .price-tag{background:var(--venise); color:var(--venise-deep)}
+.city-card[data-city="prague"] .price-tag{background:var(--prague); color:var(--prague-deep)}
+.city-grid{display:grid;grid-template-columns:1fr;gap:20px;position:relative;z-index:1}
+@media(min-width:760px){.city-grid{grid-template-columns:1fr 1fr}.city-grid .full{grid-column:1/-1}}
+.info-block{background:#fff;border-radius:var(--radius-sm);padding:24px 26px;box-shadow:var(--shadow);border:1px solid rgba(45,33,34,.05)}
+.info-block h3{font-family:'Fraunces', serif;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.info-block h3 .icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:11px}
+.city-card[data-city="madrid"] .info-block h3 .icon{background:var(--madrid); color:var(--madrid-deep)}
+.city-card[data-city="rome"] .info-block h3 .icon{background:var(--rome); color:var(--rome-deep)}
+.city-card[data-city="venise"] .info-block h3 .icon{background:var(--venise); color:var(--venise-deep)}
+.city-card[data-city="prague"] .info-block h3 .icon{background:var(--prague); color:var(--prague-deep)}
+
+.flight{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin-bottom:14px;padding:14px 0;border-bottom:1px dashed rgba(45,33,34,.12)}
+.flight:last-child{border:none;padding-bottom:0;margin-bottom:0}
+.flight-leg{display:flex;flex-direction:column}.flight-leg.right{align-items:flex-end;text-align:right}
+.flight-time{font-family:'Fraunces', serif;font-size:24px;font-weight:500;letter-spacing:-.01em;line-height:1}
+.flight-airport{font-size:12px;font-weight:600;color:var(--ink-mute);letter-spacing:.06em;margin-top:4px}
+.flight-arrow{display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--ink-mute)}
+.flight-arrow .line{width:60px;height:1px;background:currentColor;position:relative}
+.flight-arrow .line::after{content:'';position:absolute;right:-1px;top:-3px;width:8px;height:8px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.flight-arrow .duration{font-size:11px;font-weight:600}
+.flight-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink-mute);margin-top:6px}
+.flight-meta strong{color:var(--ink);font-weight:700}
+.flight-price-line{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.price-pill{display:inline-flex;align-items:baseline;gap:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-weight:800;box-shadow:var(--shadow)}
+.price-pill strong{font-family:'Fraunces', serif;font-size:28px;line-height:1}
+.price-pill span{font-size:12px;opacity:.8;text-transform:uppercase;letter-spacing:.08em}
+.small-note{font-size:12px;color:var(--ink-mute)}
+
+.lodging-list{display:flex;flex-direction:column;gap:14px}
+.lodging{padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid rgba(45,33,34,.06);position:relative}
+.lodging.maeva{background:linear-gradient(135deg, var(--cream) 0%, #fff 100%);border:1px solid rgba(242,165,179,.35)}
+.lodging.maeva::before{content:'AIDE MAEVA';position:absolute;top:-8px;right:14px;background:var(--pink-deep);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;padding:3px 10px;border-radius:999px}
+.lodging.maeva::after{content:'Base 3 nuits';position:absolute;top:-8px;left:14px;background:var(--ink);color:#fff;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 10px;border-radius:999px}
+.lodging-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+.lodging-name{font-family:'Fraunces', serif;font-weight:500;font-size:17px;letter-spacing:-.01em;flex:1}
+.lodging-price{font-family:'Fraunces', serif;font-weight:700;font-size:24px;white-space:nowrap;background:#fff;padding:8px 12px;border-radius:14px;box-shadow:0 4px 14px rgba(45,33,34,.06)}
+.city-card[data-city="madrid"] .lodging-price{color:var(--madrid-deep)}
+.city-card[data-city="rome"] .lodging-price{color:var(--rome-deep)}
+.city-card[data-city="venise"] .lodging-price{color:var(--venise-deep)}
+.city-card[data-city="prague"] .lodging-price{color:var(--prague-deep)}
+.lodging-price .per{font-family:'Plus Jakarta Sans', sans-serif;font-size:11px;font-weight:600;color:var(--ink-mute)}
+.lodging-detail{font-size:13px;color:var(--ink-soft);line-height:1.5}
+.lodging-feats{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.lodging-feat{font-size:11px;background:#fff;padding:3px 10px;border-radius:999px;color:var(--ink-soft);border:1px solid rgba(45,33,34,.08);font-weight:500}
+
+.pros-cons{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.pros-cons{grid-template-columns:1fr 1fr}}
+.pc-block{background:#fff;padding:22px 24px;border-radius:var(--radius-sm);box-shadow:var(--shadow);border:1px solid rgba(45,33,34,.05)}
+.pc-block h4{font-family:'Fraunces', serif;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:14px}
+.pc-block ul{list-style:none}
+.pc-block li{font-size:14px;color:var(--ink-soft);padding:8px 0 8px 24px;position:relative;line-height:1.5;border-bottom:1px dashed rgba(45,33,34,.08)}
+.pc-block li:last-child{border:none}
+.pc-block.pros li::before,.pc-block.cons li::before{position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.pc-block.pros li::before{content:'+'}.pc-block.cons li::before{content:'!';background:var(--cream-deep);color:var(--ink-soft)}
+.city-card[data-city="madrid"] .pc-block.pros li::before{background:var(--madrid);color:var(--madrid-deep)}
+.city-card[data-city="rome"] .pc-block.pros li::before{background:var(--rome);color:var(--rome-deep)}
+.city-card[data-city="venise"] .pc-block.pros li::before{background:var(--venise);color:var(--venise-deep)}
+.city-card[data-city="prague"] .pc-block.pros li::before{background:var(--prague);color:var(--prague-deep)}
+
+.compare-card{background:#fff;border-radius:var(--radius);padding:40px 36px;box-shadow:var(--shadow-lg);border:1px solid rgba(45,33,34,.05);position:relative;overflow:hidden}
+.compare-card::before{content:'';position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:var(--pink-soft);opacity:.8}
+.compare-card > *{position:relative;z-index:1}
+.compare-card h3{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(36px, 5vw, 56px);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
+.compare-card .sub{color:var(--ink-soft);max-width:720px;margin-bottom:26px}
+.chart-wrap{display:grid;gap:18px;margin:28px 0}
+.bar-row{display:grid;grid-template-columns:96px 1fr 74px;gap:14px;align-items:center}
+.bar-city{font-family:'Fraunces', serif;font-size:19px;font-weight:500}
+.bar-track{height:42px;background:var(--cream);border-radius:999px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(45,33,34,.05)}
+.bar-fill{height:100%;border-radius:999px;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;color:#fff;font-weight:800;font-size:13px;min-width:46px}
+.bar-fill.madrid{width:81%;background:var(--madrid-deep)}
+.bar-fill.rome{width:74%;background:var(--rome-deep)}
+.bar-fill.venise{width:100%;background:var(--venise-deep)}
+.bar-fill.prague{width:85%;background:var(--prague-deep)}
+.bar-total{font-weight:800;font-family:'Fraunces', serif;font-size:20px;text-align:right}
+.compare-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
+@media(min-width:800px){.compare-grid{grid-template-columns:repeat(4, 1fr)}}
+.compare-mini{background:var(--cream);border-radius:var(--radius-sm);padding:18px;border:1px solid rgba(45,33,34,.06)}
+.compare-mini .city{font-family:'Fraunces', serif;font-size:22px;font-weight:500;margin-bottom:8px}
+.compare-mini p{font-size:13px;color:var(--ink-soft);line-height:1.45}
+.compare-mini strong{color:var(--ink)}
+.compare-note{margin-top:22px;background:var(--pink-soft);padding:16px 18px;border-radius:var(--radius-sm);font-size:14px;color:var(--ink-soft);border-left:6px solid var(--pink-deep)}
+.compare-note strong{color:var(--ink)}
+
+.synthesis{margin-top:64px;padding:44px 36px;background:linear-gradient(135deg,var(--pink) 0%,var(--pink-soft) 100%);border-radius:var(--radius);position:relative;overflow:hidden}
+.synthesis::before{content:'';position:absolute;bottom:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.4)}
+.synthesis > *{position:relative;z-index:1}
+.synthesis h2{font-family:'Fraunces', serif;font-weight:500;font-style:italic;font-size:clamp(34px,5vw,52px);line-height:1;letter-spacing:-.02em;margin-bottom:12px}
+.synthesis .sub{color:var(--ink-soft);max-width:720px;margin-bottom:26px}
+.synthesis-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:760px){.synthesis-grid{grid-template-columns:repeat(3, 1fr)}}
+.synthesis-card{background:rgba(255,255,255,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.75);border-radius:var(--radius-sm);padding:20px;box-shadow:var(--shadow)}
+.synthesis-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-mute);font-weight:800;margin-bottom:8px}
+.synthesis-card .answer{font-family:'Fraunces', serif;font-size:24px;font-weight:500;letter-spacing:-.01em;margin-bottom:6px}
+.synthesis-card p{font-size:13px;color:var(--ink-soft);line-height:1.45}
+
+.footer{margin-top:64px;padding:40px 0 0;text-align:center;color:var(--ink-mute);font-size:13px;border-top:1px dashed rgba(45,33,34,.15)}
+.footer .heart{color:var(--pink-deep)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-size:13px;font-weight:700;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:all .25s ease;z-index:10}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:560px){
+  .wrap{padding:32px 18px 64px}.hero{padding:32px 0 24px}.city-card{padding:32px 22px}.info-block{padding:20px}.compare-card,.synthesis,.brief{padding:28px 22px}.flight{grid-template-columns:1fr auto 1fr;gap:10px}.flight-time{font-size:18px}.flight-arrow .line{width:30px}.bar-row{grid-template-columns:1fr;gap:8px}.bar-total{text-align:left}.lodging-head{flex-direction:column}.lodging-price{font-size:22px}
+}
+
+@media print{
+  body{background:#fff;background-image:none}.action-buttons,.tab-nav,.toast{display:none!important}.tab-panel{display:block!important;animation:none}.wrap{max-width:none;padding:24px}.city-card,.compare-card,.synthesis,.brief,.meta-card,.info-block,.pc-block{box-shadow:none;break-inside:avoid}.footer{margin-top:32px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <span class="ticket">28 → 30 août 2026 · Vols directs depuis Paris</span>
+    <h1>Notre <em>weekend</em><br>à 4.</h1>
+    <p class="sub">Quatre destinations, un weekend, et une décision à prendre ensemble. Voilà ce que chacune a dans le ventre — vols, logements, budget, atouts, points d'attention.</p>
+
+    <div class="action-buttons">
+      <button class="action-btn primary" id="shareBtn">Partager la page</button>
+      <button class="action-btn" id="pdfBtn">Télécharger en PDF</button>
+    </div>
+
+    <div class="hero-meta">
+      <div class="meta-card"><div class="label">Dates</div><div class="value">Ven 28 → Dim 30</div></div>
+      <div class="meta-card"><div class="label">Le crew</div><div class="value">Malcolm, Nidelle, Bergena, Maria</div></div>
+      <div class="meta-card"><div class="label">Format cible</div><div class="value">3 jours / 2 nuits</div></div>
+      <div class="meta-card"><div class="label">Mode</div><div class="value">Vol direct uniquement</div></div>
+    </div>
+  </section>
+
+  <section class="brief">
+    <h2>Le brief</h2>
+    <p>On cherche une destination où on peut tout faire un peu : visiter, manger des trucs incroyables, prendre la chaleur, chiller à fond, et se sentir dans une ville cosmopolite. Pas besoin de cocher toutes les cases à 100%, mais un vrai mix.</p>
+    <div class="chips">
+      <span class="chip">🏛 Visite</span>
+      <span class="chip">🍝 Bouffe</span>
+      <span class="chip">☀️ Chaleur</span>
+      <span class="chip">😌 Chill</span>
+      <span class="chip">🌍 Cosmopolite</span>
+    </div>
+    <div class="warning-box"><strong>Point important :</strong> le format recherché est bien un weekend de 3 jours / 2 nuits. En revanche, les options Maeva indiquées pour Madrid et Rome sont affichées sur une base de 3 nuits. Elles restent intéressantes financièrement, mais ce n'est pas exactement le même périmètre que les Airbnb en 2 nuits.</div>
+  </section>
+
+  <section class="tabs-section">
+    <h2>Les 4 candidates</h2>
+    <div class="tab-nav" role="tablist">
+      <button class="tab-btn active" data-city="madrid" role="tab"><span class="num">01</span>Madrid</button>
+      <button class="tab-btn" data-city="rome" role="tab"><span class="num">02</span>Rome</button>
+      <button class="tab-btn" data-city="venise" role="tab"><span class="num">03</span>Venise</button>
+      <button class="tab-btn" data-city="prague" role="tab"><span class="num">04</span>Prague</button>
+      <button class="tab-btn" data-city="comparatif" role="tab"><span class="num">★</span>Comparatif</button>
+    </div>
+
+    <div class="tab-panel active" data-panel="madrid">
+      <div class="city-card" data-city="madrid">
+        <div class="city-header"><div><div class="city-tagline">la fiesta</div><h3 class="city-name">Madrid</h3></div><span class="price-tag"><span>Vol direct</span><strong>143 €</strong></span></div>
+        <div class="city-grid">
+          <div class="info-block full">
+            <h3><span class="icon">✈</span> Le vol — Iberia direct</h3>
+            <div class="flight"><div class="flight-leg"><span class="flight-time">07:25</span><span class="flight-airport">ORY · Paris Orly</span></div><div class="flight-arrow"><span class="duration">2h05</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">09:30</span><span class="flight-airport">MAD · Madrid-Barajas</span></div></div>
+            <div class="flight"><div class="flight-leg"><span class="flight-time">18:00</span><span class="flight-airport">MAD · Madrid-Barajas</span></div><div class="flight-arrow"><span class="duration">2h10</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">20:10</span><span class="flight-airport">CDG · Paris CDG</span></div></div>
+            <div class="flight-meta"><span><strong>Iberia</strong> · IB584 / IB581</span><span><strong>Bagage en soute inclus</strong></span></div>
+            <div class="flight-price-line"><span class="price-pill"><span>vol</span><strong>143 €</strong></span><span class="small-note">ORY à l'aller, CDG au retour.</span></div>
+          </div>
+          <div class="info-block full">
+            <h3><span class="icon">⌂</span> Où dormir — 2 options</h3>
+            <div class="lodging-list">
+              <div class="lodging maeva"><div class="lodging-head"><div class="lodging-name">Pierre & Vacances Eurobuilding 2</div><div class="lodging-price">≈ 78 € <span class="per">/pers · 3 nuits</span></div></div><div class="lodging-detail">Nord de Madrid, quartier financier · 20 min métro du centre · piscine sur le toit (9e étage) · 4 pers, 1 chambre + canapé-lit, 1 SDB</div><div class="lodging-feats"><span class="lodging-feat">Piscine rooftop</span><span class="lodging-feat">Cuisine équipée</span><span class="lodging-feat">Climatisation</span><span class="lodging-feat">Attention : 3 nuits</span></div></div>
+              <div class="lodging"><div class="lodging-head"><div class="lodging-name">Airbnb · Las Letras (1905 rénové)</div><div class="lodging-price">≈ 123 € <span class="per">/pers · 2 nuits</span></div></div><div class="lodging-detail">Calle Echegaray · 30 sec de Plaza Santa Ana · 5 min Thyssen, 10 min Prado · 4,69★ (72 avis) · 4 pers, 2 chambres, 2 SDB · 3e étage sans ascenseur</div><div class="lodging-feats"><span class="lodging-feat">Cœur historique</span><span class="lodging-feat">2 chambres / 2 SDB</span><span class="lodging-feat">Fenêtres insonorisées</span></div></div>
+            </div>
+          </div>
+          <div class="pros-cons full"><div class="pc-block pros"><h4>Avantages</h4><ul><li>Vie nocturne légendaire : tapas-crawl jusqu'à 6h, Malasaña, Chueca, La Latina</li><li>Triangle des musées Prado / Reina Sofía / Thyssen, tous à 10 min à pied</li><li>Tapas + vermouth + terrasses : rapport qualité-prix imbattable</li><li>Aide Maeva ANCV applicable → option à 78 €/pers possible</li></ul></div><div class="pc-block cons"><h4>Points d'attention</h4><ul><li>Pleine chaleur : il peut faire très chaud fin août</li><li>Beaucoup de Madrilènes en vacances en août, certains restos locaux fermés</li><li>Vol Orly à l'aller / CDG au retour : changement d'aéroport côté Paris</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="rome">
+      <div class="city-card" data-city="rome">
+        <div class="city-header"><div><div class="city-tagline">la dolce vita</div><h3 class="city-name">Rome</h3></div><span class="price-tag"><span>Vol direct</span><strong>130 €</strong></span></div>
+        <div class="city-grid">
+          <div class="info-block full"><h3><span class="icon">✈</span> Le vol — Ryanair direct</h3><div class="flight"><div class="flight-leg"><span class="flight-time">08:40</span><span class="flight-airport">BVA · Paris Beauvais</span></div><div class="flight-arrow"><span class="duration">2h10</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">10:50</span><span class="flight-airport">FCO · Rome Fiumicino</span></div></div><div class="flight"><div class="flight-leg"><span class="flight-time">08:40</span><span class="flight-airport">FCO · Rome Fiumicino</span></div><div class="flight-arrow"><span class="duration">2h15</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">10:55</span><span class="flight-airport">BVA · Paris Beauvais</span></div></div><div class="flight-meta"><span><strong>Ryanair</strong> · FR166 / FR167 (op. Malta Air)</span><span>BVA · 1h15 de bus depuis Paris</span></div><div class="flight-price-line"><span class="price-pill"><span>vol</span><strong>130 €</strong></span><span class="small-note">Prix attractif, mais logistique Beauvais + retour très matinal.</span></div></div>
+          <div class="info-block full"><h3><span class="icon">⌂</span> Où dormir — 2 options</h3><div class="lodging-list"><div class="lodging maeva"><div class="lodging-head"><div class="lodging-name">Aparthotel Adagio Rome Vatican ★★★★</div><div class="lodging-price">≈ 70 € <span class="per">/pers · 3 nuits</span></div></div><div class="lodging-detail">Près du Vatican (&lt;5 km) · 6 km Trevi · piscine extérieure · 4 pers, 36-44m², 1 chambre + canapé-lit, 1 SDB</div><div class="lodging-feats"><span class="lodging-feat">4 étoiles</span><span class="lodging-feat">Piscine extérieure</span><span class="lodging-feat">Près du Vatican</span><span class="lodging-feat">Attention : 3 nuits</span></div></div><div class="lodging"><div class="lodging-head"><div class="lodging-name">Airbnb · Près de la gare Termini</div><div class="lodging-price">≈ 98 € <span class="per">/pers · 2 nuits</span></div></div><div class="lodging-detail">5 min de la gare · self check-in · 4,83★ (6 avis seulement) · 1 chambre (1 lit queen) + canapé-lit · 1 SDB · zone Termini pratique mais pas la plus charmante</div><div class="lodging-feats"><span class="lodging-feat">Lave-linge</span><span class="lodging-feat">Self check-in</span><span class="lodging-feat">Patio / balcon</span></div></div></div></div>
+          <div class="pros-cons full"><div class="pc-block pros"><h4>Avantages</h4><ul><li>Open-air museum unique : Colisée, Forum, Panthéon, Vatican, Trevi</li><li>Bouffe italienne au point zéro : carbonara, cacio e pepe, pizza romaine</li><li>Aperitivo + ruelles ocres + dolce vita = ambiance instagrammable</li><li>Aide Maeva ANCV applicable → option à 70 €/pers</li></ul></div><div class="pc-block cons"><h4>Points d'attention</h4><ul><li>Chaleur + humidité : fin août peut être lourd</li><li>Vol retour à 8h40 : il faut quitter l'hôtel très tôt, dimanche écourté</li><li>Beauvais à l'aller-retour : 1h15 de bus depuis Paris + marge avant le vol</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="venise">
+      <div class="city-card" data-city="venise">
+        <div class="city-header"><div><div class="city-tagline">le décor</div><h3 class="city-name">Venise</h3></div><span class="price-tag"><span>Vol direct</span><strong>168 €</strong></span></div>
+        <div class="city-grid">
+          <div class="info-block full"><h3><span class="icon">✈</span> Le vol — easyJet direct</h3><div class="flight"><div class="flight-leg"><span class="flight-time">08:05</span><span class="flight-airport">ORY · Paris Orly</span></div><div class="flight-arrow"><span class="duration">1h40</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">09:45</span><span class="flight-airport">VCE · Marco Polo</span></div></div><div class="flight"><div class="flight-leg"><span class="flight-time">21:00</span><span class="flight-airport">VCE · Marco Polo</span></div><div class="flight-arrow"><span class="duration">1h55</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">22:55</span><span class="flight-airport">CDG · Paris CDG</span></div></div><div class="flight-meta"><span><strong>easyJet</strong> · EZY4873 / EZY4552</span><span>Retour 21h = on profite du dimanche</span></div><div class="flight-price-line"><span class="price-pill"><span>vol</span><strong>168 €</strong></span><span class="small-note">Vol le plus cher, mais horaires très confortables.</span></div></div>
+          <div class="info-block full"><h3><span class="icon">⌂</span> Où dormir — 1 option (pas de Maeva)</h3><div class="lodging-list"><div class="lodging"><div class="lodging-head"><div class="lodging-name">Airbnb · I Quattro Mori (Cannaregio)</div><div class="lodging-price">≈ 115 € <span class="per">/pers · 2 nuits</span></div></div><div class="lodging-detail">Quartier authentique près du ghetto juif · 20-25 min à pied de Saint-Marc · embarcadère Guglie à proximité · 4 pers, 2 chambres séparées (2 lits queen), 1 SDB · 4,38★ (39 avis)</div><div class="lodging-feats"><span class="lodging-feat">2 vraies chambres</span><span class="lodging-feat">Cannaregio</span><span class="lodging-feat">Climatisation</span><span class="lodging-feat">Self check-in</span></div></div></div></div>
+          <div class="pros-cons full"><div class="pc-block pros"><h4>Avantages</h4><ul><li>Décor unique au monde : canaux, gondoles, Saint-Marc, Rialto</li><li>Cicchetti + spritz à la maison-mère : tour des bacari = soirée fun pour pas cher</li><li>Burano + Murano = demi-journée d'évasion</li><li>Vol retour 21h : journée du dimanche complète sur place</li></ul></div><div class="pc-block cons"><h4>Points d'attention</h4><ul><li>Pas d'aide Maeva → logement plus cher</li><li>Saturation touristique fin août : queues, foules, chaleur</li><li>Ville chère au quotidien : restos, transports en bateau</li><li>Marco Polo sur le continent : prévoir transfert vers Venise</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="prague">
+      <div class="city-card" data-city="prague">
+        <div class="city-header"><div><div class="city-tagline">la pépite</div><h3 class="city-name">Prague</h3></div><span class="price-tag"><span>Vol direct</span><strong>143 €</strong></span></div>
+        <div class="city-grid">
+          <div class="info-block full"><h3><span class="icon">✈</span> Le vol — Air France direct</h3><div class="flight"><div class="flight-leg"><span class="flight-time">09:05</span><span class="flight-airport">CDG · Paris CDG</span></div><div class="flight-arrow"><span class="duration">1h45</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">10:50</span><span class="flight-airport">PRG · Prague</span></div></div><div class="flight"><div class="flight-leg"><span class="flight-time">18:20</span><span class="flight-airport">PRG · Prague</span></div><div class="flight-arrow"><span class="duration">1h50</span><span class="line"></span><span class="duration" style="opacity:.5">direct</span></div><div class="flight-leg right"><span class="flight-time">20:10</span><span class="flight-airport">CDG · Paris CDG</span></div></div><div class="flight-meta"><span><strong>Air France</strong> · AF1382 / AF1083</span><span>CDG ↔ CDG · pas de changement d'aéroport</span></div><div class="flight-price-line"><span class="price-pill"><span>vol</span><strong>143 €</strong></span><span class="small-note">Même prix que Madrid, mais logistique plus simple côté Paris.</span></div></div>
+          <div class="info-block full"><h3><span class="icon">⌂</span> Où dormir — 1 option (pas de Maeva)</h3><div class="lodging-list"><div class="lodging"><div class="lodging-head"><div class="lodging-name">Airbnb · Plein centre Prague 1</div><div class="lodging-price">≈ 87 € <span class="per">/pers · 2 nuits</span></div></div><div class="lodging-detail">Place Venceslas à 5 min · Pont Charles à 10 min · 4 pers, 2 chambres, 3 lits doubles, 1 SDB · 4,64★ (317 avis solides) · cuisine équipée, lave-linge / sèche-linge</div><div class="lodging-feats"><span class="lodging-feat">3 lits doubles</span><span class="lodging-feat">Plein centre</span><span class="lodging-feat">Lave/sèche-linge</span><span class="lodging-feat">317 avis</span></div></div></div></div>
+          <div class="pros-cons full"><div class="pc-block pros"><h4>Avantages</h4><ul><li>Climat agréable fin août : plus respirable que Madrid, Rome ou Venise</li><li>Centre médiéval-baroque intact : Pont Charles, Château, horloge astronomique</li><li>Bière pas chère + repas abordables : très bon rapport qualité-prix</li><li>Nightlife de référence en Europe centrale</li></ul></div><div class="pc-block cons"><h4>Points d'attention</h4><ul><li>Pas d'aide Maeva disponible</li><li>Cuisine tchèque plus rustique, moins festive que Rome ou Madrid</li><li>Très touristique autour du Pont Charles, même si plus respirable que Venise</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="comparatif">
+      <div class="compare-card">
+        <h3>Le comparatif budget</h3>
+        <p class="sub">Pour garder la surprise, le récap chiffré est ici. Le graphique compare un coût simple par personne : vol + logement le plus intéressant affiché. Attention, Madrid et Rome utilisent l'option Maeva sur 3 nuits, alors que Venise et Prague sont sur Airbnb 2 nuits.</p>
+
+        <div class="chart-wrap" aria-label="Comparatif des coûts par personne">
+          <div class="bar-row"><div class="bar-city">Rome</div><div class="bar-track"><div class="bar-fill rome">vol 130 + log. 70</div></div><div class="bar-total">200 €</div></div>
+          <div class="bar-row"><div class="bar-city">Madrid</div><div class="bar-track"><div class="bar-fill madrid">vol 143 + log. 78</div></div><div class="bar-total">221 €</div></div>
+          <div class="bar-row"><div class="bar-city">Prague</div><div class="bar-track"><div class="bar-fill prague">vol 143 + log. 87</div></div><div class="bar-total">230 €</div></div>
+          <div class="bar-row"><div class="bar-city">Venise</div><div class="bar-track"><div class="bar-fill venise">vol 168 + log. 115</div></div><div class="bar-total">283 €</div></div>
+        </div>
+
+        <div class="compare-grid">
+          <div class="compare-mini"><div class="city">Rome</div><p><strong>200 €/pers</strong> avec Maeva. Moins cher, mais retour très tôt + Beauvais.</p></div>
+          <div class="compare-mini"><div class="city">Madrid</div><p><strong>221 €/pers</strong> avec Maeva. Festif, solaire, mais très chaud et retour CDG.</p></div>
+          <div class="compare-mini"><div class="city">Prague</div><p><strong>230 €/pers</strong> sans Maeva. Très bon compromis : prix, climat, CDG ↔ CDG.</p></div>
+          <div class="compare-mini"><div class="city">Venise</div><p><strong>283 €/pers</strong> sans Maeva. Plus cher, mais décor unique et retour tardif.</p></div>
+        </div>
+
+        <div class="compare-note"><strong>À ne pas oublier :</strong> les options Maeva Madrid et Rome sont moins chères, mais elles sont indiquées sur 3 nuits. Le vrai comparatif n'est donc pas parfaitement équivalent avec les Airbnb en 2 nuits.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="synthesis">
+    <h2>La vibe, en clair.</h2>
+    <p class="sub">Version synthétique : pas besoin de tout classer ligne par ligne. Chaque ville a son vrai argument.</p>
+    <div class="synthesis-grid">
+      <div class="synthesis-card"><div class="label">Pour sortir et sentir l'été</div><div class="answer">Madrid</div><p>La plus festive et cosmopolite. Très bon plan si le groupe veut surtout manger, sortir, marcher et vivre la ville.</p></div>
+      <div class="synthesis-card"><div class="label">Pour patrimoine + bouffe</div><div class="answer">Rome</div><p>La plus forte culturellement et culinairement. Mais la logistique Beauvais + retour très tôt casse un peu le confort.</p></div>
+      <div class="synthesis-card"><div class="label">Pour le décor waouh</div><div class="answer">Venise</div><p>La plus dépaysante visuellement. À choisir si le prix et les foules ne sont pas bloquants.</p></div>
+      <div class="synthesis-card"><div class="label">Pour le meilleur équilibre</div><div class="answer">Prague</div><p>Le choix malin : prix correct, climat agréable, logement central, vols CDG ↔ CDG et vraie ambiance.</p></div>
+      <div class="synthesis-card"><div class="label">Le moins cher affiché</div><div class="answer">Rome</div><p>En addition simple vol + Maeva, Rome arrive devant. Mais c'est aussi l'option la moins confortable niveau horaires.</p></div>
+      <div class="synthesis-card"><div class="label">Le verdict honnête</div><div class="answer">Madrid ou Prague</div><p>Madrid pour la vibe chaude et festive. Prague pour le confort, le budget maîtrisé et le compromis global.</p></div>
+    </div>
+  </section>
+
+  <div class="footer">Préparé avec <span class="heart">♥</span> · Vols & logements illustratifs, prix susceptibles de bouger d'ici août 2026.</div>
+</div>
+
+<div class="toast" id="toast">Lien copié</div>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  const toast = document.getElementById('toast');
+
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.city;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      panels.forEach(p => p.classList.toggle('active', p.dataset.panel === target));
+      if(window.innerWidth < 760){
+        document.querySelector('.tab-nav').scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    const shareData = {
+      title: document.title,
+      text: 'Notre comparatif pour le weekend du 28 au 30 août 2026',
+      url: window.location.href
+    };
+
+    try{
+      if(navigator.share){
+        await navigator.share(shareData);
+      } else if(navigator.clipboard){
+        await navigator.clipboard.writeText(window.location.href);
+        showToast('Lien copié');
+      } else {
+        showToast('Copie non disponible sur ce navigateur');
+      }
+    } catch(error){
+      showToast('Partage annulé');
+    }
+  });
+
+  document.getElementById('pdfBtn').addEventListener('click', () => {
+    window.print();
+  });
+</script>
+</body>
+</html>
